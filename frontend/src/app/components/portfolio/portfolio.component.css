@@ -1,0 +1,34 @@
+.portfolio_container{
+    overflow: initial;   
+}
+
+.portfolios{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap:2rem;
+    padding-bottom: 3rem;
+}
+
+.portfolio_content{
+    padding: 0 1.5rem;
+}
+
+#portfolio_img{
+    width: 265px;
+    border-radius: .5rem;
+    justify-self:center;
+}
+
+.portfolio_title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.portfolio_description{
+    margin-bottom: var(--mb-0-75);
+}
+
+.porfolio_button:hover .button_icon{
+    transform: translateX(0.25rem);
+}
+

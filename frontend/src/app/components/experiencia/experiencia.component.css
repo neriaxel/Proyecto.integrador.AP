@@ -1,0 +1,76 @@
+.exp_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:2rem;
+    padding-bottom: 3rem;
+}
+
+.experiencia-item{
+    position: relative;
+    padding-left: 3rem;
+    border-left: 1px solid var(--first-color-lighter);
+}
+
+.exp-icon{
+    position:absolute;
+    left: -27px;
+    top: 0;
+    background-color: var(--first-color-lighter);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-icon i{
+    font-size: 1.3rem;
+}
+
+.exp-duracion{
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.exp-title{
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+span{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+p{
+    color: var(--text-color);
+}
+
+
+
+/*
+
+.experiencia_icon{
+    font: size 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.experiencia_data{
+    display: grid;
+    column-gap: 2.5rem;
+}
+
+.experiencia_title{
+    font-size: var(--normal-font-size);
+    
+}
+
+*/

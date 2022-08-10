@@ -1,0 +1,115 @@
+.modal fade{
+    min-height: 100vh;
+    padding: 50px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.modal-content{
+    border-color: var(--first-color-lighter);
+    border: 1px solid var(--first-color-lighter);
+    padding: 40px 50px;
+    border-radius: 15%;
+    backdrop-filter: blur(150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content h5{ 
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--first-color);
+    font-weight: 500;
+}
+
+
+.modal-body .input-box{
+    margin: 15px;
+}
+
+.modal-body ::placeholder{
+    color: var(--text-color);
+    opacity: 1;
+}
+
+.input-control{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.2px solid var(--text-color);
+    color: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+
+.input-control:focus{
+    outline: none;
+}
+
+.input-link{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.modal-footer .btn{
+    height: 45px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select:none;
+    background: linear-gradient(to right, var(--first-color-secondary), var(--first-color-alt));
+    border: none;
+    color: var(--container-color);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.modal-footer .btn::before{
+    content:"";
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.5s ease;
+    z-index: -1;
+}
+
+.modal-footer .btn:hover::before{
+    background-color: var(--first-color-alt);
+}
+
+@media( max-width: 575px){
+    body::after,
+    body::before{
+        height: 250px;
+        width: 250px;
+        filter: blur(100px);
+    }
+
+    .modal-content{
+        padding: 30px;
+    }
+
+    .modal-header h5{
+        font-size: 24px;
+    }
+}
