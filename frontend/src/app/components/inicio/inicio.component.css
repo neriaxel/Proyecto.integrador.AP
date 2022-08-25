@@ -1,0 +1,21 @@
+@media screen and (min-width: 780px) {
+    .header{
+        top: 0;
+        bottom: initial;
+    }
+
+    .header,
+    .main,
+    .footer {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header,
+    .main,
+    .footer{
+        padding: 0;
+    }
+
+}

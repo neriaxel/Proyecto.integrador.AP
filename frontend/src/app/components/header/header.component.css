@@ -1,15 +1,15 @@
-.nav{
+.navbar{
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    margin-top: 10px;
 }
 
 /*============ NAV ============*/
-.nav{
-    max-width: 968px;
+.navbar{
     height: var(--header-height);
     display:flex;
     justify-content: space-between;
@@ -17,8 +17,8 @@
 }
 
 .navbar-brand{
-    width: 100px;
-    height: 35px;
+    width: 120px;
+    height: 45px;
     margin-left: 20px;
     margin-top: -8px;
 }
@@ -37,17 +37,41 @@
     color: var(--first-color);
 }
 
-.navbar-nav{
-    margin-right: 60px;
-}
 
 .nav-item {
     margin-right: 10px;
 }
 
+.nav-item .btn{ 
+    width: 100%;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    border: none;
+    color: var(--container-color);
+    z-index: 1;
+    overflow: hidden;
+    border: none;
+    background: linear-gradient(to left, var(--first-color-alt), var(--first-color-tertiary));
+}
 
-@media screen and (max-width: 767px){
-    .collapse navbar-collapse{
+.nav-item .btn::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color .8s ease-out;
+    z-index: -1;
+}
+.nav-item .btn:hover{
+    background-color: var(--first-color);
+}
+
+
+@media screen and (max-width: 993px){
+    .navbar-collapse{
         position: fixed;
         bottom: 0;
         left: 0;
@@ -58,11 +82,12 @@
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
-}
 
-.nav-link active{
-    grid-template-columns: repeat(3, 1fr);
+
+.navbar-nav{
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    display: grid;
 }
 
 .nav-link{
@@ -82,7 +107,50 @@
     font-size: 1.2rem;
 }
 
+.nav_close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
 
-/* show menu */
+.nav_close:hover{
+    color: var(--first-color-alt);
+}
+}
 
-/* show menu */
+@media screen and (max-width: 350px) {
+    .navbar-collapse{
+        padding: 2rem .25rem 2rem;
+    }
+
+    .navbar-nav{
+        column-gap: 0;
+        display: grid;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .nav{
+        height:calc(var(--header-height) + 1.5rem);
+        column-gap: 1rem;
+    }
+
+    .nav_icon,
+    .nav_close,
+    .navbar-toggle{
+        display: none;
+    }
+
+    .nav-link{
+        display: flex;
+        column-gap: 2rem;  
+    } 
+
+    
+    
+}
+

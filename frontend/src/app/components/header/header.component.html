@@ -1,56 +1,61 @@
-<nav class="navbar navbar-expand-lg" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://www.instagram.com/argentinaprograma/">
+    <img src="assets/image/logo.ap.png" alt="logo-AP" >
+  </a>
   
-    <div class="container-fluid">
-      <a class="navbar-brand" href="https://www.instagram.com/argentinaprograma/">
-        <img src="assets/image/logo.ap.png" alt="logo-AP" >
-      </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="uil uil-apps"></i>
+  </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="uil uil-apps"></i>
-      </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#home"> 
+            <i class="uil uil-estate nav_icon"></i> Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about"><i class="uil uil-user-square nav_icon"></i> Acerca de mí
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#educacion"><i class="uil uil-graduation-cap nav_icon"></i> Educación
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#experiencia"><i class="uil uil-briefcase-alt nav_icon"></i> Experiencia
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#skills"><i class="uil uil-file-alt nav_icon"></i> Skills
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#portfolio"><i class="uil uil-scenery nav_icon"></i> Portfolio
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contacto"><i class="uil uil-message nav_icon"></i> Contacto
+        </a>
+      </li>
+      <li class="nav-item"> 
+        <button type="button" class="btn btn-primary" (click)="login()" *ngIf="!isLogged" data-bs-toggle="modal" data-bs-target="#exampleModal" data-auth-modal-tab="login" >
+          <i class="uil uil-user nav_icon"></i> Ingresar
+        </button>
+      </li>
+      <li class="nav-item"> 
+        <button type="button" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#exampleModal" data-auth-modal-tab="login" >
+          <i class="uil uil-user nav_icon"></i> Cerrar sesión
+        </button>
+      </li>
+    </ul>
+      
+  </div>
+</nav>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home"> 
-                <i class="uil uil-estate nav_icon"></i> Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about"><i class="uil uil-user-square nav_icon"></i> Acerca de mí
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#educacion"><i class="uil uil-graduation-cap nav_icon"></i> Educación
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experiencia"><i class="uil uil-briefcase-alt nav_icon"></i> Experiencia
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills"><i class="uil uil-file-alt nav_icon"></i> Skills
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio"><i class="uil uil-scenery nav_icon"></i> Portfolio
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto"><i class="uil uil-message nav_icon"></i> Contacto
-            </a>
-          </li>
-          <li class="nav-item"> 
-            <button type="button" class="btn btn-primary" (click)="login()" *ngIf="!isLogged" data-bs-toggle="modal" data-bs-target="#exampleModal" data-auth-modal-tab="login" >
-              <i class="uil uil-user nav_icon"></i> Ingresar
-            </button>
-          </li>
-          <li class="nav-item"> 
-            <button type="button" class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#exampleModal" data-auth-modal-tab="login" >
-              <i class="uil uil-user nav_icon"></i> Cerrar sesión
-            </button>
-          </li>
-        </ul>
-        
-      </div>
-    </div>
-  </nav>
+
+
+
+
+
+
+

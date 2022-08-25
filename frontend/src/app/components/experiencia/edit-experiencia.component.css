@@ -1,0 +1,185 @@
+.editexp-form{
+    min-height: 100vh;
+    padding: 60px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.gradient-text{
+    background: linear-gradient(to left, var(--first-color-secondary), var(--first-color-tertiary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.editexp-content{
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+}
+
+.circle-1,
+.circle-2,
+.circle-3{
+    position: absolute;
+    background: linear-gradient(to right, var(--first-color-secondary), var(--first-color-tertiary));
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle-1{
+    height: 200px;
+    width: 200px;
+    left: 13%;
+    top: 7%;
+    transform: traslateX(-50%);
+}
+
+.circle-2{
+    height: 150px;
+    width: 150px;
+    right: 25%;
+    bottom: 10%;
+    transform: traslateX(20%, 20%);
+}
+
+.circle-3{
+    height: 100px;
+    width: 100px;
+    right: 20%;
+    top: 10%;
+}
+
+
+
+.editexp-content .login-box{
+    border-color: var(--first-color);
+    border: 2px solid var(--border-color);
+    padding: 40px 50px 50px;
+    border-radius: 20px;
+    backdrop-filter: var(--blur);
+}
+
+.editexp_title{
+    font-size: 38px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--first-color);
+    font-weight: 800;
+}
+
+.editexp_subtitle{
+    font-size: 25px;
+    text-align: center;
+    line-height: 1;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form{
+    margin: 25px 0 20px;
+}
+
+.input-box{
+    margin: 25px;
+}
+
+.editexp-content ::placeholder{
+    color: inherit;
+    opacity: 0.8;
+}
+
+.input-control{
+    display:block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid var(--text-color);
+    color:var(--text-color-secondary);
+    font-weight: inherit;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.input-control:focus{
+    outline: none;
+}
+
+.input-link{
+    margin-top: 10px;
+    text-align: right;
+}
+
+.btn{
+    margin: 4px;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    border: none;
+    color: var(--container-color);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: background-color .8s ease-out;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    background-color: var(--first-color-alt);
+}
+
+.btn-editexp{
+    background: linear-gradient(to left, var(--first-color-alt), var(--first-color-tertiary));
+}
+
+.btn-volver{
+    background: var(--relleno-color);
+}
+
+.login-content p{
+    text-align: center;
+}
+
+
+@media(max-width: 575px){
+    body::after,
+    body::before{
+        height: 250px; 
+        width: 250px;
+        filter: blur(100px);
+    }
+
+    .editexp-box{ 
+        padding: 30px;
+    }
+
+    .editexp_title,
+    .editexp_subtitle{
+        font-size: 24px;
+    } 
+}

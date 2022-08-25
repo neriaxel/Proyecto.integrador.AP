@@ -1,51 +1,112 @@
-.education_tabs{
+
+  .education_tabs {
     display: flex;
     justify-content: flex;
-    margin-bottom: var(--mb-2);
-}
+    margin-bottom: var(--mb-3);
+  }
 
-
-.education_icon{
+  .education_icon {
     font-size: 1.8rem;
     margin-right: var(--mb-0-25);
-}
+  }
 
-.education_data{
-    display:grid;
+  .education_data {
+    display: grid;
     grid-template-columns: 1fr max-content 1fr;
     column-gap: 2.5rem;
-}
+  }
+  .educacion_item{
+    margin-bottom: 20px;
+  }
 
-.education_title{
+  .education_title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    
-}
+  }
 
-.education_subtitle{
+  .education_subtitle {
     display: inline-block;
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-1);
-}
+  }
 
-.education_calendar{
+  .education_calendar {
     font-size: var(--smaller-font-size);
     color: var(--text-color-light);
-}
+  }
 
-.education_rounder{
+  .education_rounder {
     display: inline-block;
     width: 13px;
     height: 13px;
     background-color: var(--first-color);
     border-radius: 50%;
-}
+  }
 
-.education_line{
-    display:block;
+  .education_line {
+    display: block;
     width: 1px;
     height: 100%;
     background-color: var(--first-color);
     transform: translate(6px, -7px);
+  }
+
+  .newedu-btn{
+    margin: 4px;
+    height: 45px;
+    width: 18%;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    border: none;
+    color: var(--container-color);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: linear-gradient(to left, var(--first-color-alt), var(--first-color-tertiary));
+  }
+  
+  .nav-icon{
+    color:var(--first-color-secondary);
+  }
+
+@media screen and (max-width: 350px) {
+  .education_data {
+    gap: 0.5rem;
+  }
 }
 
+@media  screen and (min-width: 568px){
+    .education section {
+    display: grid;
+    grid-template-columns: .6fr;
+    justify-content: center;
+    }
+
+    .education_tabs{
+      justify-content: center;
+    }
+}
+
+@media screen and (min-width: 780px){
+
+    .education_data{
+        gap: 1rem;
+    }
+
+    .education_tabs{
+        justify-content: center;
+    }
+
+    .education_buttons{
+        margin: 0 var(--mb-10);
+    }
+
+    .education_sections{
+        grid-template-columns: .5fr;
+    }
+}

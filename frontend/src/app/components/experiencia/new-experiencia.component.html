@@ -1,0 +1,44 @@
+  <section class="exp-form">
+    <div class="exp-content">
+  
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+  
+      <div class="exp-box">
+        <h1 class="exp_title">Nueva experiencia</h1>
+        <h3 class="exp_subtitle">Ingresar nueva experiencia</h3>
+      
+  
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="input-box">
+            <label for="nombreE"> Nombre del puesto</label>
+            <input type="text" class="input-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+        </div>
+
+        <div class="input-box">
+          <label for="nombreEmp"> Nombre de la empresa</label>
+          <input type="text" class="input-control" id="nombreEmp" name="nombreEmp" [(ngModel)]="nombreEmp" required>
+      </div>
+  
+        <div class="input-box">
+            <label for="descripcionE"> Descripción de la tarea</label>
+            <textarea type="text" class="input-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+        </div>
+  
+        
+          <button
+            type="button"
+            
+            class="btn btn-volver">
+            Volver
+          </button>
+  
+          <button type="submit" class="btn btn-exp">
+            Agregar
+          </button>
+        
+      </form>
+      </div>
+    </div>
+  </section>

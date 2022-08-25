@@ -16,6 +16,9 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NeweducacionComponent } from './components/education/neweducacion.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     LoginComponent,
     InicioComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
   ],
   imports: [
     BrowserModule,

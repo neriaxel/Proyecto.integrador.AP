@@ -4,54 +4,28 @@
         <i class="uil uil-briefcase-alt experiencia_icon"></i>
     </span>
 
+    <div>
+        <button type="button" class="newexp-btn" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva experiencia
+        </button>
+    </div>
+
     <div class="exp_container container">
-        <div class="experiencia-item">
+        <div class="experiencia-item" *ngFor="let Experiencia of expe">
             <div class="exp-icon">            
                 <i class="uil uil-briefcase-alt"></i>   
             </div>
             <p class="exp-duracion"> Abr 2022 - Actualidad</p>
-            <h3 class="exp_title"> Asistente de Logistica<span> - Codimat S.A</span></h3>
+            <h3 class="exp_title"> {{Experiencia.nombreE}} <span> {{Experiencia.nombreEmp}}</span></h3>
             
             <p>
-                Gestión y control de stock y almacen. Recepción, identificación, 
-                despacho y control de la calidad de los productos.
+                {{Experiencia.descripcionE}}
             </p>
-        </div> 
-
-        <div class="experiencia-item">
-            <div class="exp-icon">            
-                <i class="uil uil-briefcase-alt"></i>
-            </div>
-            <p class="exp-duracion"> 2020 - Actualidad</p>
-            <h3 class="exp_title"> Inversor en Mercado de Capitales<span> - Independiente</span></h3>
-            <p>
-                Gestión de cartera propia de activos financieros.
-            </p>
-        </div> 
-
-        <div class="experiencia-item">
-            <div class="exp-icon">            
-                <i class="uil uil-briefcase-alt"></i>
-            </div>
-            <p class="exp-duracion"> 2020 - 2021</p>
-            <h3 class="exp_title"> Asesor Financiero<span> - Clipper Life S.A</span></h3>
-            <p>
-                Contactar a clientes y asesorarlos sobre los distintos intrumentos de 
-                ahorro, inversión y seguros de vida brindados por Zurich International.
-            </p>
-        </div> 
+            
+            <button class="btn btn-edit" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}"><i class="uil uil-edit nav-icon"></i> Editar</button>
         
-
-        <div class="experiencia-item">
-            <div class="exp-icon">            
-                <i class="uil uil-briefcase-alt"></i>
-            </div>
-            <p class="exp-duracion"> Julio 2021 - Actualidad</p>
-            <h3 class="exp_title"> Integrante de Saavedra Turismo<span> - Saavedra Turismo</span></h3>
-            <p>
-                Gestión de redes sociales de la organización.
-                Contactar e incentivar a los grupos de interés para fomentar la capacidad emprendora de actividades turisticas.
-            </p>
+            <button class="btn btn-edit" *ngIf="isLogged" (click)="delete(Experiencia.id)"><i class="uil uil-multiply nav-icon"></i> Borrar</button>
+        
         </div> 
-    </div>
-</section>
+
+ 

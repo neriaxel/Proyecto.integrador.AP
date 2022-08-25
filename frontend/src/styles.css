@@ -61,7 +61,7 @@
 
 
 /* Font size for large devices */
-@media screen and(min-width: 820px){
+@media screen and(min-width: 968px){
     :root {
         --big-font-size: 3rem;
         --h1-font-size: 2.25rem;
@@ -169,3 +169,28 @@ img{
     align-items: center;
 }
 
+@media screen and (max-width: 350px){
+    .container{
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (min-width: 780px){
+    .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+    .body{
+        margin: 0;
+    }
+
+    .section{
+        padding: 6rem 0 2rem;
+    }
+
+    .section_subtitle{
+        margin-bottom: 4rem;
+    }
+}

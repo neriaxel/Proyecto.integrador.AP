@@ -1,0 +1,49 @@
+<section class="edu-form">
+    <div class="edu-content">
+  
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+      <div class="circle-3"></div>
+  
+      <div class="edu-box">
+        <h1 class="edu_title">Educación</h1>
+        <h3 class="edu_subtitle">Ingresar nueva educación</h3>
+      
+  
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="input-box">
+            <label for="nombreE"> Nombre estudio</label>
+            <input type="text" class="input-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+        </div>
+
+        <div class="input-box">
+          <label for="fechaEI"> Fecha de inicio</label>
+          <input type="date" value="AAAA-MM" class="input-control" id="fechaEI" name="fechaEI" [(ngModel)]="fechaEI" required>
+        </div>
+
+        <div class="input-box">
+          <label for="fechaEF"> Fecha de fin</label>
+          <input type="date" value="AAAA-MM" class="input-control" id="fechaEF" name="fechaEF" [(ngModel)]="fechaEF" required>
+        </div>
+  
+        <div class="input-box">
+            <label for="descripcionE"> Nombre de la Institución</label>
+            <textarea type="text" class="input-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+        </div>
+  
+        
+          <button
+            type="button"
+            
+            class="btn btn-volver">
+            Volver
+          </button>
+  
+          <button type="submit" class="btn btn-edu">
+            Agregar
+          </button>
+        
+      </form>
+      </div>
+    </div>
+  </section>

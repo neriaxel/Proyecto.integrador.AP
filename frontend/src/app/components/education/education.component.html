@@ -2,79 +2,46 @@
     <h2 class="section_title">Educación</h2>
     <span class="section_subtitle">Mis estudios <i class="uil uil-graduation-cap education_icon"></i></span>
 
+    <div>
+        <button type="button" class="newedu-btn" routerLink="/nuevaedu/" *ngIf="isLogged">
+            Nueva educación
+        </button>
+    </div>
+
     <div class="education_container container">
         <div class="education_tabs">
 
             <div class="education_sections">
                 <!--================== QUALIFICATION CONTENT 1 ===============-->
-                <div class="education_content">
+                <div *ngFor="let Educacion of educacion" class="education_content">
                     <!--================== QUALIFICATION 1 ===============-->
-                    <div class="education_data">
-                        <div>
-                            <h3 class="education_title"> Licenciatura en Administración</h3>
-                            <span class="education_subtitle"> Universidad Nacional del Sur </span>
+                    <div  class="education_data"> 
+                        <div class="educacion_item">
+                            <h3 class="education_title"> {{Educacion.nombreE}}</h3>
+                            <span class="education_subtitle"> {{Educacion.descripcionE}}</span>
                             <div class="education_calendar">
                                 <i class="uil uil-calendar-alt"></i>
-                                2013 - 2022
+                                 {{Educacion.fechaEI | date}} - {{Educacion.fechaEF | date}}
                             </div>
+                            
+                            <button class="btn btn-edit" *ngIf="isLogged" routerLink="/editexp/{{Educacion.id}}"><i class="uil uil-edit nav-icon"></i> Editar</button>
+        
+                            <button class="btn btn-edit" *ngIf="isLogged" (click)="delete(Educacion.id)"><i class="uil uil-multiply nav-icon"></i> Borrar</button>
                         </div>
                         <div>
                             <span class="education_rounder"></span>
                             <span class="education_line"></span>
                         </div>
+                        <div>
+                            <img src="\assets\image\codimat.png">
+                        </div>  
+   
                     </div>
-                    <!--================== QUALIFICATION 2 ===============-->
-                    <div class="education_data">
-                        <div></div>
-                        <div>
-                            <span class="education_rounder"></span>
-                            <span class="education_line"></span>
-                        </div>
-                        <div>
-                            <h3 class="education_title"> Desarrollador Full Stack Jr.</h3>
-                            <span class="education_subtitle"> Argentina Programa </span>
-                        <div class="education_calendar">
-                            <i class="uil uil-calendar-alt"></i>
-                            2021 - 2022
-                        </div>
-                        </div>
-                        
-                    </div>
-                    <!--================== QUALIFICATION 3 ===============-->
-                    <div class="education_data">
-                        
-                        <div>
-                            <h3 class="education_title">Data Analytics </h3>
-                            <span class="education_subtitle">Coderhouse</span>
-                        <div class="education_calendar">
-                            <i class="uil uil-calendar-alt"></i>
-                            2021 - 2022
-                        </div>
-                        </div>
-                        <div>
-                            <span class="education_rounder"></span>
-                            <span class="education_line"></span>
-                        </div>
-                    </div>
-                    <!--================== QUALIFICATION 4 ===============-->
-                    <div class="education_data">
-                        <div></div>
-                        <div>
-                            <span class="education_rounder"></span>
-                        </div>
-                        <div>
-                            <h3 class="education_title">Testing QA Manual</h3>
-                            <span class="education_subtitle"> Coderhouse </span>
-                        <div class="education_calendar">
-                            <i class="uil uil-calendar-alt"></i>
-                            2021 - 2022
-                        </div>
-                        </div>
-                    </div>    
+   
                 </div>
             </div>
 
         </div>
     </div>
  
-</section>
+</section> 
