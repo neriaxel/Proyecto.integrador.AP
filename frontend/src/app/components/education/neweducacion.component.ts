@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { Storage, ref, uploadBytes, listAll, getDownloadURL  } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-neweducacion',
@@ -13,11 +14,14 @@ export class NeweducacionComponent implements OnInit {
   descripcionE: string;
   fechaEI: Date;
   fechaEF: Date;
+  
 
-
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(private educacionS: EducacionService, private router: Router) {
+    
+   }
 
   ngOnInit(): void {
+    
   }
 
   onCreate(): void{
@@ -33,4 +37,5 @@ export class NeweducacionComponent implements OnInit {
       )
   }
 
+  
 }

@@ -9,7 +9,6 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
@@ -19,6 +18,9 @@ import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NeweducacionComponent } from './components/education/neweducacion.component';
+import { EditeducacionComponent } from './components/education/editeducacion.component';
+import { PortfoliosComponent } from './components/portfolio/portfolios.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,7 +32,6 @@ import { NeweducacionComponent } from './components/education/neweducacion.compo
     SkillsComponent,
     EducationComponent,
     ExperienciaComponent,
-    PortfolioComponent,
     ContactoComponent,
     FooterComponent,
     LoginComponent,
@@ -38,12 +39,15 @@ import { NeweducacionComponent } from './components/education/neweducacion.compo
     NewExperienciaComponent,
     EditExperienciaComponent,
     NeweducacionComponent,
+    EditeducacionComponent,
+    PortfoliosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

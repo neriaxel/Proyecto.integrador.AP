@@ -25,6 +25,17 @@
             <label for="descripcionE"> Descripción de la tarea</label>
             <textarea type="text" class="input-control" id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required></textarea>
         </div>
+
+        <div class="input-box">
+          <label for="fechaEI"> Fecha de inicio</label>
+          <input type="date" value="AAAA-MM" class="input-control" id="fechaEI" name="fechaEI" [(ngModel)]="expLab.fechaEI" required>
+        </div>
+
+        <div class="input-box">
+          <label for="fechaEF"> Fecha de fin</label>
+          <input type="date" value="AAAA-MM" class="input-control" id="fechaEF" name="fechaEF" [(ngModel)]="expLab.fechaEF" required>
+        </div>
+  
   
         
           <button

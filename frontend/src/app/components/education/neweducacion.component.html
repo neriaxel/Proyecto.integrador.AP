@@ -10,10 +10,15 @@
         <h3 class="edu_subtitle">Ingresar nueva educación</h3>
       
   
-      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm" entype="multipart/form-data">
         <div class="input-box">
             <label for="nombreE"> Nombre estudio</label>
             <input type="text" class="input-control" id="nombreE" name="nombreE" [(ngModel)]="nombreE" required>
+        </div>
+        
+        <div class="input-box">
+            <label for="descripcionE"> Nombre de la Institución</label>
+            <textarea type="text" class="input-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
         </div>
 
         <div class="input-box">
@@ -25,12 +30,8 @@
           <label for="fechaEF"> Fecha de fin</label>
           <input type="date" value="AAAA-MM" class="input-control" id="fechaEF" name="fechaEF" [(ngModel)]="fechaEF" required>
         </div>
-  
-        <div class="input-box">
-            <label for="descripcionE"> Nombre de la Institución</label>
-            <textarea type="text" class="input-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
-        </div>
-  
+        
+        
         
           <button
             type="button"

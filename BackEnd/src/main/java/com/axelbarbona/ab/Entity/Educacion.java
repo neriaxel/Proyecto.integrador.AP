@@ -29,6 +29,7 @@ public class Educacion {
         this.descripcionE = descripcionE;
         this.fechaEI = fechaEI;
         this.fechaEF = fechaEF;
+
     }
 
     
@@ -74,8 +75,5 @@ public class Educacion {
     public void setFechaEF(Date fechaEF) {
         this.fechaEF = fechaEF;
     }
-    
-    
-    
-    
+  
 }

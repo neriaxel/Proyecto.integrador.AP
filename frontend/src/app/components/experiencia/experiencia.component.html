@@ -15,7 +15,10 @@
             <div class="exp-icon">            
                 <i class="uil uil-briefcase-alt"></i>   
             </div>
-            <p class="exp-duracion"> Abr 2022 - Actualidad</p>
+            <div class="exp_calendar">
+                <i class="uil uil-calendar-alt"></i>
+                 {{Experiencia.fechaEI | date}} - {{Experiencia.fechaEF | date}}
+            </div>
             <h3 class="exp_title"> {{Experiencia.nombreE}} <span> {{Experiencia.nombreEmp}}</span></h3>
             
             <p>
